@@ -26,7 +26,7 @@ const getAllChans = async () => {
     let err = null;
     let res = null;
 
-    await fetch("https://raw.githubusercontent.com/rraj1572/TataSkyIPTV-Daily/master/code_samples/allChannels.json?token=AVXFYHTB3GJZVKG6YUF6QQLBVY53E", requestOptions)
+    await fetch("https://gist.githubusercontent.com/rraj157/6d8cbbc87e5f3334ace19e78a89baafa/raw/Allchannellist.json", requestOptions)
       .then(response => response.text())
       .then(result => res = JSON.parse(result))
       .then(r => r)
