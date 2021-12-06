@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
         sName: req.query.sname,
         token: req.query.tkn,
         ent: req.query.ent.split('_'),
-        tsActive: req.query.sid.split('_')[1] === "D" ? false : true
+        tsActive: true
     };
     if(uData.tsActive)
     {
