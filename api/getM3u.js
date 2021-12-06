@@ -15,7 +15,8 @@ module.exports = async (req, res) => {
       res.send(m3uString);
     }
     else
-      res.status(409).json({error: "Tata Sky Deactivated"});
+      let m3uString = await generateM3u(uData);
+      res.send(m3uString);
 }
 
 const getAllChans = async () => {
