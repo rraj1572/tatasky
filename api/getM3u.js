@@ -26,7 +26,7 @@ const getAllChans = async () => {
     let err = null;
     let res = null;
 
-    await fetch("https://ghostbin.com/uEFoQ", requestOptions)
+    await fetch("https://ghostbin.com/uEFoQ/raw", requestOptions)
       .then(response => response.text())
       .then(result => res = JSON.parse(result))
       .then(r => r)
