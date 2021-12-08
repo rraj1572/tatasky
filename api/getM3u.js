@@ -26,7 +26,7 @@ const getAllChans = async () => {
     let err = null;
     let res = null;
 
-    await fetch("https://ts-api.videoready.tv/content-detail/pub/api/v1/channels?limit=590", requestOptions)
+    await fetch("https://gist.githubusercontent.com/rraj1572/f5f3297b1de2f81341bc8e5e3a598aa5/raw/allchannel.json", requestOptions)
       .then(response => response.text())
       .then(result => res = JSON.parse(result))
       .then(r => r)
