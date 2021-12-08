@@ -25,6 +25,7 @@ const getAllChans = async () => {
 
     let err = null;
     let res = null;
+    
 
     await fetch("https://gist.githubusercontent.com/rraj1572/f5f3297b1de2f81341bc8e5e3a598aa5/raw/allchannel.json", requestOptions)
       .then(response => response.text())
