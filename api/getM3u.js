@@ -129,7 +129,7 @@ const getAllChans = async () => {
       let userChanDetails = await getUserChanDetails(userChans);
       let chansList = userChanDetails.list;
       //console.log(chansList);
-      let m3uStr = '#EXTM3U    x-tvg-url="http://botallen.live/epg.xml.gz"\n\n#EXTINF:-1 tvg-id="154" tvg-name="SONY SAB" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO0_hPT5TK_ek1I0NA2mpJ0AhCJc3Ue1C3Mw&usqp=CAU" tvg-chno="699" group-title="Entertainment",Sony Sab\nhttp://rrgroup.in1.bitmana.io/m3u8.php?c=Sony_SAB&q=800&e=junk.m3u8\n\n';
+      let m3uStr = '#EXTM3U    x-tvg-url="http://botallen.live/epg.xml.gz"\n\n#EXTINF:-1 tvg-id="154" tvg-name="SONY SAB" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO0_hPT5TK_ek1I0NA2mpJ0AhCJc3Ue1C3Mw&usqp=CAU" tvg-chno="699" group-title="Entertainment",SONY SAB\nhttp://rrgroup.in1.bitmana.io/m3u8.php?c=Sony_SAB&q=800&e=junk.m3u8\n\n';
       for (let i = 0; i < chansList.length; i++) {
         m3uStr += '#EXTINF:-1  tvg-id=' + chansList[i].meta[0].channelId.toString() + '  ';
         m3uStr += 'tvg-logo=' + chansList[i].meta[0].channelLogo + '   ';
