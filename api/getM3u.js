@@ -130,7 +130,7 @@ const getAllChans = async () => {
       let chansList = userChanDetails.list;
       //console.log(chansList);
       let m3uStr = '#EXTM3U    x-tvg-url="http://botallen.live/epg.xml.gz"\n\n#EXTINF:-1 tvg-id="154" tvg-name="SONY SAB" tvg-logo="https://raw.githubusercontent.com/rraj1572/JioTV-1/main/PicsArt_12-09-03.36.07.png" tvg-chno="699" group-title="Entertainment",SONY SAB\nhttp://rrjiotv.azurewebsites.net/live.php?c=Sony_SAB&q=800&e=junk.m3u8\n\n';
-      for (let i = 0; i < 2; i++) {
+      for (let i = 0; i < channelList.length; i++) {
         m3uStr += '#EXTINF:-1  tvg-id=' + chansList[i].meta[0].channelId.toString() + '  ';
         m3uStr += 'tvg-logo=' + chansList[i].meta[0].channelLogo + '   ';
         m3uStr += 'group-title=' + chansList[i].meta[0].primaryGenre + ',   ' + chansList[i].meta[0].channelName + '\n';
@@ -138,55 +138,7 @@ const getAllChans = async () => {
         m3uStr += '#KODIPROP:inputstream.adaptive.license_key=' + chansList[i].detail.dashWidewineLicenseUrl + '&ls_session=';
         m3uStr += jwt.token + '\n';
         m3uStr += chansList[i].detail.dashWidewinePlayUrl + '\n\n';
-        
       }
-        m3uStr += '#EXTINF:-1 tvg-id="154" tvg-name="&TV HD" tvg-logo="https://akamaividz2.zee5.com/image/upload/resources/0-9-tvhd_0/channel_web/1170x658withlogo_378606665.png" tvg-chno="699" group-title="Entertainment",&TV HD\nhttps://rrzee5.000webhostapp.com/z5.php?c=0-9-tvhd_0\n\n'
-      for (let i = 3; i < 5; i++) {
-        m3uStr += '#EXTINF:-1  tvg-id=' + chansList[i].meta[0].channelId.toString() + '  ';
-        m3uStr += 'tvg-logo=' + chansList[i].meta[0].channelLogo + '   ';
-        m3uStr += 'group-title=' + chansList[i].meta[0].primaryGenre + ',   ' + chansList[i].meta[0].channelName + '\n';
-        m3uStr += '#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha' + '\n';
-        m3uStr += '#KODIPROP:inputstream.adaptive.license_key=' + chansList[i].detail.dashWidewineLicenseUrl + '&ls_session=';
-        m3uStr += jwt.token + '\n';  
-        m3uStr += chansList[i].detail.dashWidewinePlayUrl + '\n\n';
-      }
-        m3uStr += '#EXTINF:-1 tvg-id="154" tvg-name="ZEE TV HD" tvg-logo="https://akamaividz2.zee5.com/image/upload/resources/0-9-zeetvhd/channel_web/1170x658withlog_1554775145.png" tvg-chno="699" group-title="Entertainment",ZEE TV HD\nhttps://rrzee5.000webhostapp.com/z5.php?c=0-9-zeetvhd\n\n'
-       
-      for (let i = 6; i < 10; i++) {
-        m3uStr += '#EXTINF:-1  tvg-id=' + chansList[i].meta[0].channelId.toString() + '  ';
-        m3uStr += 'tvg-logo=' + chansList[i].meta[0].channelLogo + '   ';
-        m3uStr += 'group-title=' + chansList[i].meta[0].primaryGenre + ',   ' + chansList[i].meta[0].channelName + '\n';
-        m3uStr += '#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha' + '\n';
-        m3uStr += '#KODIPROP:inputstream.adaptive.license_key=' + chansList[i].detail.dashWidewineLicenseUrl + '&ls_session=';
-        m3uStr += jwt.token + '\n';  
-        m3uStr += chansList[i].detail.dashWidewinePlayUrl + '\n\n';  
-      }
-        m3uStr += '#EXTINF:-1 tvg-id="154" tvg-name="ZEE Cinema HD" tvg-logo="https://akamaividz2.zee5.com/image/upload/resources/0-9-zeecinemahd/channel_web/1170x658withlogo_167952257.png" tvg-chno="699" group-title="Movies",ZEE Cinema HD\nhttps://rrzee5.000webhostapp.com/z5.php?c=0-9-zeecinemahd\n\n'
-        m3uStr += '#EXTINF:-1 tvg-id="154" tvg-name="ZEE Cinema" tvg-logo="https://akamaividz2.zee5.com/image/upload/resources/0-9-zeecinema/channel_web/1170x658withlogo_807278654.png" tvg-chno="699" group-title="Movies",ZEE Cinema\nhttps://rrzee5.000webhostapp.com/z5.php?c=0-9-zeecinema\n\n'
-        m3uStr += '#EXTINF:-1 tvg-id="154" tvg-name="& Pictures HD" tvg-logo="https://akamaividz2.zee5.com/image/upload/resources/0-9-tvpictureshd/channel_web/1170x658withlog_1476130363.png" tvg-chno="699" group-title="Moviest",&Pictures HD\nhttps://rrzee5.000webhostapp.com/z5.php?c=0-9-tvpictureshd\n\n'
-        m3uStr += '#EXTINF:-1 tvg-id="154" tvg-name="& Pictures" tvg-logo="https://akamaividz2.zee5.com/image/upload/resources/0-9-pictures/channel_web/1170x658withlog_1269578414.png" tvg-chno="699" group-title="Movies",&Pictures\nhttps://rrzee5.000webhostapp.com/z5.php?c=0-9-pictures\n\n'
-      for (let i = 14; i < 37; i++) {
-        m3uStr += '#EXTINF:-1  tvg-id=' + chansList[i].meta[0].channelId.toString() + '  ';
-        m3uStr += 'tvg-logo=' + chansList[i].meta[0].channelLogo + '   ';
-        m3uStr += 'group-title=' + chansList[i].meta[0].primaryGenre + ',   ' + chansList[i].meta[0].channelName + '\n';
-        m3uStr += '#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha' + '\n';
-        m3uStr += '#KODIPROP:inputstream.adaptive.license_key=' + chansList[i].detail.dashWidewineLicenseUrl + '&ls_session=';
-        m3uStr += jwt.token + '\n';  
-        m3uStr += chansList[i].detail.dashWidewinePlayUrl + '\n\n';  
-      }
-        m3uStr += '#EXTINF:-1 tvg-id="154" tvg-name="9XM" tvg-logo="https://akamaividz2.zee5.com/image/upload/resources/0-9-131/channel_web/1170x658withlog_2074233892.png" tvg-chno="699" group-title="Music",9XM\nhttps://rrzee5.000webhostapp.com/z5.php?c=0-9-131\n\n'
-     
-      for (let i = 38; i < 45; i++) {
-        m3uStr += '#EXTINF:-1  tvg-id=' + chansList[i].meta[0].channelId.toString() + '  ';
-        m3uStr += 'tvg-logo=' + chansList[i].meta[0].channelLogo + '   ';
-        m3uStr += 'group-title=' + chansList[i].meta[0].primaryGenre + ',   ' + chansList[i].meta[0].channelName + '\n';
-        m3uStr += '#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha' + '\n';
-        m3uStr += '#KODIPROP:inputstream.adaptive.license_key=' + chansList[i].detail.dashWidewineLicenseUrl + '&ls_session=';
-        m3uStr += jwt.token + '\n';  
-        m3uStr += chansList[i].detail.dashWidewinePlayUrl + '\n\n';
-      }
-        
-        
       console.log('all done!');
       return m3uStr;
     }
