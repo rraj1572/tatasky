@@ -163,9 +163,9 @@ const getAllChans = async () => {
       }
         m3uStr += '#EXTINF:-1 tvg-id="154" tvg-name="ZEE Cinema HD" tvg-logo="https://akamaividz2.zee5.com/image/upload/resources/0-9-zeecinemahd/channel_web/1170x658withlogo_167952257.png" tvg-chno="699" group-title="Movies",ZEE Cinema HD\nhttps://rrzee5.000webhostapp.com/z5.php?c=0-9-zeecinemahd\n\n'
         m3uStr += '#EXTINF:-1 tvg-id="154" tvg-name="ZEE Cinema" tvg-logo="https://akamaividz2.zee5.com/image/upload/resources/0-9-zeecinema/channel_web/1170x658withlogo_807278654.png" tvg-chno="699" group-title="Movies",ZEE Cinema\nhttps://rrzee5.000webhostapp.com/z5.php?c=0-9-zeecinema\n\n'
-        m3uStr += '#EXTINF:-1 tvg-id="154" tvg-name="& Pictures HD" tvg-logo="https://akamaividz2.zee5.com/image/upload/resources/0-9-tvpictureshd/channel_web/1170x658withlog_1476130363.png" tvg-chno="699" group-title="Moviest",&Pictures HD HD\nhttps://rrzee5.000webhostapp.com/z5.php?c=0-9-tvpictureshd\n\n'
+        m3uStr += '#EXTINF:-1 tvg-id="154" tvg-name="& Pictures HD" tvg-logo="https://akamaividz2.zee5.com/image/upload/resources/0-9-tvpictureshd/channel_web/1170x658withlog_1476130363.png" tvg-chno="699" group-title="Moviest",&Pictures HD\nhttps://rrzee5.000webhostapp.com/z5.php?c=0-9-tvpictureshd\n\n'
         m3uStr += '#EXTINF:-1 tvg-id="154" tvg-name="& Pictures" tvg-logo="https://akamaividz2.zee5.com/image/upload/resources/0-9-pictures/channel_web/1170x658withlog_1269578414.png" tvg-chno="699" group-title="Movies",&Pictures\nhttps://rrzee5.000webhostapp.com/z5.php?c=0-9-pictures\n\n'
-      for (let i = 11; i < 15; i++) {
+      for (let i = 15; i < 43; i++) {
         m3uStr += '#EXTINF:-1  tvg-id=' + chansList[i].meta[0].channelId.toString() + '  ';
         m3uStr += 'tvg-logo=' + chansList[i].meta[0].channelLogo + '   ';
         m3uStr += 'group-title=' + chansList[i].meta[0].primaryGenre + ',   ' + chansList[i].meta[0].channelName + '\n';
