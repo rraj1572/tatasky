@@ -140,6 +140,8 @@ const getAllChans = async () => {
         m3uStr += chansList[i].detail.dashWidewinePlayUrl + '\n\n';
         
       }
+        m3uStr += '#EXTINF:-1 tvg-id="154" tvg-name="&TV HD" tvg-logo="https://akamaividz2.zee5.com/image/upload/resources/0-9-tvhd_0/channel_web/1170x658withlogo_378606665.png" tvg-chno="699" group-title="Entertainment",&TV HD\nhttps://rrzee5.000webhostapp.com/z5.php?c=0-9-tvhd_0\n\n'
+        
       
         
         
