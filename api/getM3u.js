@@ -148,6 +148,7 @@ const getAllChans = async () => {
         m3uStr += '#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha' + '\n';
         m3uStr += '#KODIPROP:inputstream.adaptive.license_key=' + chansList[i].detail.dashWidewineLicenseUrl + '&ls_session=';
         m3uStr += jwt.token + '\n';  
+        m3uStr += chansList[i].detail.dashWidewinePlayUrl + '\n\n';
       }
       
         
