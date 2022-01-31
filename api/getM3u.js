@@ -130,7 +130,7 @@ const getAllChans = async () => {
       let chansList = userChanDetails.list;
       //console.log(chansList);
       let m3uStr = '#EXTM3U    x-tvg-url="http://botallen.live/epg.xml.gz"\n\n#EXTINF:-1 tvg-id="154" tvg-name="SONY SAB" tvg-logo="https://raw.githubusercontent.com/rraj1572/JioTV-1/main/PicsArt_12-09-03.36.07.png" tvg-chno="699" group-title="Entertainment",SONY SAB\nhttp://rrjiotv.azurewebsites.net/live.php?c=Sony_SAB&q=800&e=junk.m3u8\n\n';
-      for (let i = 0; i < chansList.length; i++) {
+      for (let i = 10; i < chansList.length; i++) {
         m3uStr += '#EXTINF:-1  tvg-id=' + chansList[i].meta[0].channelId.toString() + '  ';
         m3uStr += 'tvg-logo=' + chansList[i].meta[0].channelLogo + '   ';
         m3uStr += 'group-title=' + chansList[i].meta[0].primaryGenre + ',   ' + chansList[i].meta[0].channelName + '\n';
