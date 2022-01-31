@@ -150,6 +150,16 @@ const getAllChans = async () => {
         m3uStr += jwt.token + '\n';  
         m3uStr += chansList[i].detail.dashWidewinePlayUrl + '\n\n';
       }
+        m3uStr += '#EXTINF:-1 tvg-id="154" tvg-name="ZEE TV HD" tvg-logo="https://akamaividz2.zee5.com/image/upload/resources/0-9-zeetvhd/channel_web/1170x658withlog_1554775145.png" tvg-chno="699" group-title="Entertainment",ZEE TV HD\nhttps://rrzee5.000webhostapp.com/z5.php?c=0-9-zeetvhd\n\n'
+       
+      for (let i = 7; i < 11; i++) {
+        m3uStr += '#EXTINF:-1  tvg-id=' + chansList[i].meta[0].channelId.toString() + '  ';
+        m3uStr += 'tvg-logo=' + chansList[i].meta[0].channelLogo + '   ';
+        m3uStr += 'group-title=' + chansList[i].meta[0].primaryGenre + ',   ' + chansList[i].meta[0].channelName + '\n';
+        m3uStr += '#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha' + '\n';
+        m3uStr += '#KODIPROP:inputstream.adaptive.license_key=' + chansList[i].detail.dashWidewineLicenseUrl + '&ls_session=';
+        m3uStr += jwt.token + '\n';  
+        m3uStr += chansList[i].detail.dashWidewinePlayUrl + '\n\n';  
       
         
         
