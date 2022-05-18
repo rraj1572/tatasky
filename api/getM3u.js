@@ -129,7 +129,7 @@ const getAllChans = async () => {
       let userChanDetails = await getUserChanDetails(userChans);
       let chansList = userChanDetails.list;
       //console.log(chansList);
-      let m3uStr = '#EXTM3U    x-tvg-url="http://botallen.live/epg.xml.gz"\n\n#EXTINF:-1 tvg-id="154" tvg-name="SONY SAB" tvg-logo="https://raw.githubusercontent.com/rraj1572/JioTV-1/main/PicsArt_12-09-03.36.07.png" tvg-chno="699" group-title="Entertainment",SONY SAB\nhttp://rrjiotv1572.azurewebsites.net/live.php?c=Sony_SAB&q=800&e=junk.m3u8\n\n';
+      let m3uStr = '#EXTM3U    x-tvg-url="http://botallen.live/epg.xml.gz"\n\n#EXTINF:-1 tvg-id="154" tvg-name="SONY SAB" tvg-logo="https://raw.githubusercontent.com/rraj1572/JioTV-1/main/PicsArt_12-09-03.36.07.png" tvg-chno="699" group-title="Entertainment",SONY SAB\nhttps://live.ambaniuncle.tk/hotstar/samsung/api.m3u8?lang=hin|referer=https://www.hotstar.com/&user-agent=ExoPlayer\n\n';
       for (let i = 0; i < chansList.length; i++) {
         m3uStr += '#EXTINF:-1  tvg-id=' + chansList[i].meta[0].channelId.toString() + '  ';
         m3uStr += 'tvg-logo=' + chansList[i].meta[0].channelLogo + '   ';
