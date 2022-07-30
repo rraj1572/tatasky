@@ -131,7 +131,7 @@ const getAllChans = async () => {
       //console.log(chansList);
       let m3uStr = '#EXTM3U    x-tvg-url="https://3o77.short.gy/tsepg.xml.gz"\n\n#EXTINF:-1 tvg-id="154" tvg-name="SONY SAB" tvg-logo="https://bit.ly/3mjHHX3" tvg-chno="699" group-title="Entertainment",SONY SAB\nhttp://rrjiotvweb.azurewebsites.net/autoq.php?c=Sony_SAB\n\n';
       for (let i = 0; i < chansList.length; i++) {
-        m3uStr += '#EXTINF:-1  tvg-id=ts' + chansList[i].meta[0].channelId.toString() + '  ';
+        m3uStr += '#EXTINF:-1  tvg-id=snehts' + chansList[i].meta[0].channelId.toString() + '  ';
         m3uStr += 'tvg-logo=' + chansList[i].meta[0].channelLogo + '   ';
         m3uStr += 'group-title=' + chansList[i].meta[0].primaryGenre + ',   ' + chansList[i].meta[0].channelName + '\n';
         m3uStr += '#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha' + '\n';
